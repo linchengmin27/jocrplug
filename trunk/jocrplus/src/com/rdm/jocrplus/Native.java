@@ -3,7 +3,9 @@ package com.rdm.jocrplus;
 public class Native {
 
 	static {
-		System.loadLibrary("jocrplus");
+		if ( !Library.load("jocrplus")) {
+			Library.loadLibraryFromJar("jocrplus");
+		}
 	}
 	
 	static native int create(String data);

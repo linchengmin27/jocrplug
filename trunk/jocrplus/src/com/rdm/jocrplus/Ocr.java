@@ -14,10 +14,7 @@ public class Ocr {
 	@Override
 	protected void finalize() throws Throwable {
 		super.finalize();
-		if (hw != 0) {
-			Native.destroy(hw);
-			hw = 0;
-		}
+		dispose();
 	}
 	
 	public void dispose() {
@@ -52,14 +49,14 @@ public class Ocr {
 	}
 	
 	
-	public String ocrImage(BufferedImage image, RecognizeMode mode) {
+	public String recognizeImage(BufferedImage image, RecognizeMode mode) {
 		int w = image.getWidth();
 		int h = image.getHeight();
 		int[] argb = image.getRGB(0, 0, w, h, null, 0, w);
-		return ocrPixes(argb, w, h, mode);
+		return recognizePixes(argb, w, h, mode);
 	}
 	
-	public String ocrPixes(int[] rgb, int w, int h, RecognizeMode mode) {
+	public String recognizePixes(int[] rgb, int w, int h, RecognizeMode mode) {
 		if (Native.ocr(hw, w, h, rgb, mode.getMode())) {
 			return Native.getUTF8Result(hw);
 		}
