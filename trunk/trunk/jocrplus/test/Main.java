@@ -24,7 +24,7 @@ public class Main {
 		
 		java.awt.image.BufferedImage bi = javax.imageio.ImageIO.read(new java.io.File(file));
 
-		result = ocr.ocrImage(bi, RecognizeMode.SINGLE_TEXT_LINE);
+		result = ocr.recognizeImage(bi, RecognizeMode.SINGLE_TEXT_LINE);
 		System.out.println("ocrImage : " + result);
 
 		ocr.dispose();
