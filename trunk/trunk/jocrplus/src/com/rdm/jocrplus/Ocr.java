@@ -3,6 +3,11 @@ package com.rdm.jocrplus;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
+/**
+ * It's not thread safe.
+ * @author lokier
+ *
+ */
 public class Ocr {
 	
 	int hw = 0;
