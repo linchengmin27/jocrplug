@@ -10,6 +10,7 @@ public class OcrManager {
 	}
 	
 	private OcrManager() {
+		
 	}
 
 	public Ocr createOcr(String langFileName) {

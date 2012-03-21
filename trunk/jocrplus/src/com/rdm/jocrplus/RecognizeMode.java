@@ -7,9 +7,11 @@ public enum RecognizeMode {
 	SINGLE_CHARACTER(10);
 	
 	int mode = 10;
+	
 	RecognizeMode(int i) {
 		mode = i;
 	}
+	
 	public int getMode() {
 		return mode;
 	}
