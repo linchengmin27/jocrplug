@@ -7,13 +7,13 @@ import java.io.InputStream;
 
 public class Library {
 
-	static final String OS_NAME;
+	static private final String OS_NAME;
 	
-	static final String SEPARATOR;
+	static private final String SEPARATOR;
 	
-	static final boolean isWin32OS;
+	static private final boolean isWin32OS;
 	
-	static final String USER_DIR;
+	static private final String USER_DIR;
 	
 	static {
 		SEPARATOR = System.getProperty("file.separator");
