@@ -8,11 +8,8 @@ import java.io.InputStream;
 public class Library {
 
 	static private final String OS_NAME;
-	
 	static private final String SEPARATOR;
-	
 	static private final boolean isWin32OS;
-	
 	static private final String USER_DIR;
 	
 	static {
